@@ -54,6 +54,9 @@ def send(m, p):
         data=dataj
     )
     response = r.json()
+    if response['error']:
+        print('API Level error: ')
+        print(response)
     return response
 
 
@@ -85,3 +88,46 @@ def process_input_ops(filename):
             output.append(temp)
     response = createOpportunities(output)
     return response
+
+
+def prep_contacts(file):
+    """Import csv file of leads."""
+    with open(file) as f:
+        reader = csv.DictReader(f)
+        contacts = []
+        for row in reader:
+            contacts.append(row)
+    return contacts
+
+
+def upload_contacts(contacts):
+    """Send leads table to system."""
+    data = {'objects': contacts}
+    return(send('createLeads', data))
+
+
+def getContacts():
+    """Retrieve all contacts."""
+    method = 'getLeads'
+    params = {'where': {}}
+
+    response = send(method, params)
+    records = response['result']['lead']
+
+    leads = []
+    for record in records:
+        leads.append(record)
+    return(leads)
+
+
+def link_opleads(opportunities, contacts):
+    """Sync leads with opportunities on custom field."""
+    opleads = []
+    for contact in contacts:
+        for op in opportunities:
+            if (contact['SOME_CUSTOM_FIELD'] ==
+                    op['SOME_CUSTOM_FIELD']):
+                temp = {'opportunityID': op['id'], 'leadID': contact['id']}
+                opleads.append(temp)
+    data_final = {'objects': opleads}
+    return(send('createOpportunityLeads', data_final))
