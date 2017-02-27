@@ -2,12 +2,12 @@
     "docs": [
         {
             "location": "/",
-            "text": "Welcome to the SharpSpring Library Overview\n\n\nFor full documentation visit \nmkdocs.org\n.\n\n\nUsage Examples\n\n\nSeveral examples have been recorded with prior versions of the Sharpspring_Common library as jupyter notebooks. To access, make sure you have the Anaconda python distribution installed, or at least jupyter-notebook.\n\n\njupyter-notebook\n - Opens the directory in the default browser.\n\n\nAccount Import\n\n\nCEF Donation Sum\n\n\nClear Sharpspring App\n\n\nProject layout\n\n\nmkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    Sharpspring_Common_Update.md # Basic library documentation\nSharpspring_Common.py # Main library file",
+            "text": "Welcome to the SharpSpring Library Overview\n\n\nFor SharpSpring API Documentation visit https://YOURAPP.marketingautomation.services/settings/pubapireference\n\n\nUsage Examples\n\n\nSeveral examples have been recorded with prior versions of the Sharpspring_Common library as jupyter notebooks. To access, make sure you have the Anaconda python distribution installed, or at least jupyter-notebook.\n\n\njupyter-notebook\n - Opens the directory in the default browser.\n\n\nAccount Import\n\n\nCEF Donation Sum\n\n\nClear Sharpspring App\n\n\nProject layout\n\n\nmkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    Sharpspring_Common_Update.md # Basic library documentation\nSharpspring_Common.py # Main library file",
             "title": "Home"
         },
         {
             "location": "/#welcome-to-the-sharpspring-library-overview",
-            "text": "For full documentation visit  mkdocs.org .",
+            "text": "For SharpSpring API Documentation visit https://YOURAPP.marketingautomation.services/settings/pubapireference",
             "title": "Welcome to the SharpSpring Library Overview"
         },
         {
