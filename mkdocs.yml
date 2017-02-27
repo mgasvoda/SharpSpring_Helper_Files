@@ -1,0 +1,5 @@
+site_name: MkLorum
+pages:
+    - Home: index.md
+    - Sharpspring Common: Sharpspring_Common_Update.md
+theme: readthedocs
