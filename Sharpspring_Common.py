@@ -321,8 +321,11 @@ def delete_records(records, m):
     for x in records:
         temp = {'id': x['id']}
         to_kill.append(temp)
-    data = {'objects': to_kill}
-    return(send(m, data))
+    if len(new_contacts) > 400:
+        return(batch_send_objects('updateLeads', new_contacts))
+    else:
+        data = {'objects': new_contacts}
+        return(send('updateLeads', data))
 
 
 if __name__ == '__main__':
